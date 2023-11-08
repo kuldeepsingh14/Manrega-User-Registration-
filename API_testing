@@ -1,0 +1,48 @@
+import requests
+'''
+# Define the API endpoint URL
+url = 'http://127.0.0.1:5000/register'
+
+# Define the data to be sent in the POST request (as a dictionary)
+ 
+data = {
+    'name': 'Mir Matlup Ali',
+    'age': 21,
+    'email': '120matlup2054@sjcem.edu.in',
+    'phone_number': '9764929295',
+    'address': 'palghar'
+}
+
+# Send the POST request
+response = requests.post(url, json=data)
+
+# Check the response status code
+if response.status_code == 201:
+    print('POST request was successful! Status code: 201 Created')
+    # You can parse and work with the response content here, if needed.
+else:
+    print(f'POST request failed with status code {response.status_code}')
+    print(response.text)  # Print the response content for debugging purposes
+
+
+'''
+# Define the API endpoint URL for login
+login_url = 'http://127.0.0.1:5000/login'
+
+# Define the user's credentials (username and password)
+credentials = {
+    'username': 'zYpJjnN72uvvmA',
+    'password': 'VavTaAO1nbZaWxHK'
+}
+
+# Send a POST request to the login API
+response = requests.post(login_url, json=credentials)
+
+# Check the response status code
+if response.status_code == 200:
+    print('Login successful! Status code: 200 OK')
+    # You can parse and work with the response content here, if needed.
+    # Typically, the API will respond with an authentication token or user data.
+else:
+    print(f'Login failed with status code {response.status_code}')
+    print(response.text)  # Print the response content for debugging purposes
